@@ -1,15 +1,3 @@
-#   TODO 1: See examples
-# main https://josemukorivo.com/#latest
-# ideas https://nelsonfai.dev/#project
-#       https://sebkay.com/
-
-# basics https://www.rida.dev/
-# decorations https://parthmittal.netlify.app/
-#   templates
-# https://bootstrapmade.com/demo/iPortfolio/
-
-
-#   TODO 2: Code the template
 from flask import Flask, render_template
 from flask_bootstrap import Bootstrap
 import requests
@@ -36,27 +24,18 @@ def show_post(index):
 
     requested_post = None
     for blog_post in posts:
-        print(blog_post["id"])  # 1 2 3 4
+        print(blog_post["id"])
         if blog_post["id"] == index:
             requested_post = blog_post
             print(requested_post)
 
     return render_template("portfolio-details.html", post=requested_post)
-# {{ url_for('show_post', index=post.id) }}
+
 
 @app.route("/about")
 def about():
-    # fazer link direto de imagens
-    # conteudo do api
     return render_template("portfolio-details.html")
 
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-
-#   TODO 3: Code the backend code including the blog display
-
-#   Todo 4: Decorate and bugs
-
-#   Todo 5: Write the text and correcpt
