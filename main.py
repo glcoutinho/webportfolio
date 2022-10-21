@@ -18,7 +18,7 @@ app = Flask(__name__)
 app.secret_key = "any-string-you-want-just-keep-it-secret"
 Bootstrap(app)
 
-posts = requests.get("https://api.npoint.io/64c7237ab0caa3ef8f31").json()
+posts = requests.get("https://api.npoint.io/424f38e0b2008d01e0a8").json()
 
 @app.route("/")
 def home():

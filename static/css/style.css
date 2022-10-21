@@ -14,7 +14,7 @@ body {
 }
 
 a {
-  color: #DAFF00;
+  color: #0E172A;
   text-decoration: none;
 }
 
@@ -927,10 +927,13 @@ section {
 }
 
 .contact .php-email-form {
+  position: absolute;
   width: 100%;
   padding: 30px;
   background: #fff;
-  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0 0px 0 rgba(0, 0, 0, 0.12);
+  padding-right: 50%;
+
 }
 
 .contact .php-email-form .form-group {

@@ -9,7 +9,7 @@
             <div class="d-flex justify-content-between align-items-center">
                 <h2>Portfoio Details</h2>
                 <ol>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
                     <li>Portfoio Details</li>
                 </ol>
             </div>
@@ -26,34 +26,42 @@
                 <div class="col-lg-8">
                     <div class="portfolio-details-slider swiper">
                         <div class="swiper-wrapper align-items-center">
+
                             <div>
-                                    {{ post.img | safe }}
+                                {{ post.img1 | safe }}
+                            </div>
+                            <div>
+                                {{ post.img2 | safe }}
+                            </div>
+                            <div>
+                                {{ post.img3 | safe }}
+                            </div>
+
                         </div>
+                        <div class="swiper-pagination"></div>
+
                     </div>
-
-                    <div class="swiper-pagination"></div>
                 </div>
+
+                <div class="col-lg-4">
+                    <div class="portfolio-info">
+                        <h3>Project information</h3>
+                        <ul>
+                            <li><strong>Category</strong>: {{ post.Category }}</li>
+                            <li><strong>Client</strong>: {{ post.Client }}</li>
+                            <li><strong>Project date</strong>: {{ post.date }}</li>
+                            <li><strong>Project URL</strong>: <a href="https://github.com/glcoutinho">My github</a></li>
+                        </ul>
+                    </div>
+                    <div class="portfolio-description">
+                        <h2>{{ post.title }}</h2>
+                        <p>
+                            {{ post.body | safe }}
+                        </p>
+                    </div>
+                </div>
+
             </div>
-
-            <div class="col-lg-4">
-                <div class="portfolio-info">
-                    <h3>Project information</h3>
-                    <ul>
-                        <li><strong>Category</strong>: Web design</li>
-                        <li><strong>Client</strong>: ASU Company</li>
-                        <li><strong>Project date</strong>: 01 March, 2020</li>
-                        <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
-                    </ul>
-                </div>
-                <div class="portfolio-description">
-                    <h2>{{ post.title }}</h2>
-                    <p>
-                        {{ post.body }}
-                    </p>
-                </div>
-            </div>
-
-        </div>
 
         </div>
     </section><!-- End Portfolio Details Section -->
