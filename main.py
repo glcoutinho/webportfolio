@@ -6,21 +6,19 @@ app = Flask(__name__)
 app.secret_key = "any-string-you-want-just-keep-it-secret"
 Bootstrap(app)
 
-posts = requests.get("https://api.npoint.io/424f38e0b2008d01e0a8").json()
+# posts = requests.get("https://api.npoint.io/424f38e0b2008d01e0a8").json()
+
+posts = requests.get("https://api.npoint.io/6d0b687721ea3abf966f").json()
+
 
 @app.route("/")
 def home():
-    # demasiado formal?
-    # Cores bem?
-    # CV intro ou no intro summary bug
-    # Favicon
-    # what bold??
     return render_template("index.html", all_posts=posts)
 
 
 @app.route("/post/<int:index>")
 def show_post(index):
-    print(index) # 2
+    print(index)  # 2
 
     requested_post = None
     for blog_post in posts:
