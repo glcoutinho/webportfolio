@@ -8,7 +8,7 @@ Bootstrap(app)
 
 # posts = requests.get("https://api.npoint.io/424f38e0b2008d01e0a8").json()
 
-posts = requests.get("https://api.npoint.io/6d0b687721ea3abf966f").json()
+posts = requests.get("https://api.npoint.io/f2cd82bb7a1133d71e27").json()
 
 
 @app.route("/")

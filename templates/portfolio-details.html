@@ -50,7 +50,7 @@
                             <li><strong>Category</strong>: {{ post.Category }}</li>
                             <li><strong>Client</strong>: {{ post.Client }}</li>
                             <li><strong>Project date</strong>: {{ post.date }}</li>
-                            <li><strong>Project URL</strong>: <a href="https://github.com/glcoutinho">My github</a></li>
+                            <li><strong>Project URL</strong>:  {{ post.Github | safe }} See the complete work  </a></li>
                         </ul>
                     </div>
                     <div class="portfolio-description">
