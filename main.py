@@ -6,9 +6,9 @@ app = Flask(__name__)
 app.secret_key = "any-string-you-want-just-keep-it-secret"
 Bootstrap(app)
 
-# posts = requests.get("https://api.npoint.io/424f38e0b2008d01e0a8").json()
 
-posts = requests.get("https://api.npoint.io/f2cd82bb7a1133d71e27").json()
+posts = requests.get("https://api.npoint.io/dbe70b7cb2821bda980d").json()
+
 
 
 @app.route("/")
